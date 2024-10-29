@@ -1,3 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
 .key {
     transition: all 0.07s;
     color: #8e6464;
@@ -5,6 +12,7 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
 }
 
 .playing {
@@ -23,7 +31,8 @@ body {
     height: 100vh;
     display:flex;
     flex-flow: row wrap; 
-    gap: 16px 4px;
+    gap: 8px 10px;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
