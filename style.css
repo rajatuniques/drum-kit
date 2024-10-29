@@ -1,5 +1,6 @@
 .key {
     transition: all 0.07s;
+    color: #d7bebe;
 }
 
 .playing {
@@ -12,4 +13,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.keys {
+    height: 100vh;
+    display:flex;
+    flex-flow: row wrap; 
+    gap: 2px 2px;
+    justify-content: center;
+    align-items: center;
 }
