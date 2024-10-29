@@ -12,7 +12,10 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 10px;
+    background-color: #242c7cb3;
+    height: 35px;
+    width: 35px;
 }
 
 .playing {
@@ -31,7 +34,7 @@ body {
     height: 100vh;
     display:flex;
     flex-flow: row wrap; 
-    gap: 8px 10px;
+    gap: 8px 8px;
     justify-content: center;
     align-items: center;
     align-content: center;
