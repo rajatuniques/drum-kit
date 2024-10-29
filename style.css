@@ -1,6 +1,10 @@
 .key {
     transition: all 0.07s;
-    color: #d7bebe;
+    color: #8e6464;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .playing {
@@ -19,7 +23,7 @@ body {
     height: 100vh;
     display:flex;
     flex-flow: row wrap; 
-    gap: 2px 2px;
+    gap: 16px 4px;
     justify-content: center;
     align-items: center;
 }
