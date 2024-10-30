@@ -57,9 +57,20 @@
 
         <script>
 
-            function playSound(e) {
+            function playSoundWithKey(e) {
                 const audio = document.querySelector(`audio[data-key="${e.code}"]`);
                 const key = document.querySelector(`.key[data-key="${e.code}"]`);
+                console.log(e.code);
+                if(!audio) return;
+                audio.currentTime = 0;//rewind to start
+                audio.play();
+                key.classList.add('playing');
+            }
+
+            function playSoundWithMouse(e)  {
+                const mouseKey = e.srcElement.getAttribute('data-key');
+                const audio = document.querySelector(`audio[data-key="${mouseKey}"]`);
+                const key = document.querySelector(`.key[data-key="${mouseKey}"]`);
                 if(!audio) return;
                 audio.currentTime = 0;//rewind to start
                 audio.play();
@@ -73,8 +84,12 @@
 
             const keys = document.querySelectorAll('.key');
             keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-            window.addEventListener('keydown', playSound);
+            window.addEventListener('keydown', playSoundWithKey);
+            
+            const mouse = document.querySelectorAll('.key');
+            window.addEventListener('mousedown', playSoundWithMouse);
+            
         </script>
     </div>
 </body>
-</html>
+</html> 
